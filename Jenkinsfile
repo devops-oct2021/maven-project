@@ -22,6 +22,9 @@ stages
          sh 'mvn package'
      }
  } }
+ 
+stage ('get approval from  qa manager')
+ { steps { input 'Plese approve the pipeline for qa deployment' } }
 
 
 }
